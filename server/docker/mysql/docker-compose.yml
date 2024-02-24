@@ -1,0 +1,10 @@
+services:
+   db:
+      image: mysql:latest
+      restart: always
+      container_name: my-mysql-db
+      environment:
+         - MYSQL_DATABASE=dart_shop
+         - MYSQL_ROOT_PASSWORD=123456
+      ports:
+         - "3307:3306"
