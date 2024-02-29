@@ -121,12 +121,12 @@ export const Products = async (req, res, next) => {
          } else {
             products = results;
             // Xử lý kết quả truy vấn (results)
-            // console.log("Query results:", results);
+            console.log("Query results:", results);
             res.send(JSON.stringify(products));
          }
       });
    } finally {
-      // connection.end();
+      connection.end();
    }
    // });
 };
