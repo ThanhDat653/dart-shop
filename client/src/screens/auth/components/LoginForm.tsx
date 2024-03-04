@@ -1,32 +1,34 @@
-import React, { useState } from "react";
+import { PATHS } from '@/constants/path'
+import React, { useState } from 'react'
+import { Link, NavLink, Navigate } from 'react-router-dom'
 
 const LoginForm = () => {
    let [user, setUser] = useState({
-      email: "",
-      password: "",
-   });
+      email: '',
+      password: '',
+   })
 
    const handleOnchangeValue = (event: any) => {
-      setUser({ ...user, [event.target.name]: event.target.value });
-   };
+      setUser({ ...user, [event.target.name]: event.target.value })
+   }
 
    const handleSubmit = async () => {
-      console.log(JSON.stringify(user));
-      await fetch("http://localhost:8000/api/v1/users/register", {
-         method: "POST",
+      console.log(JSON.stringify(user))
+      await fetch('http://localhost:8000/api/v1/users/register', {
+         method: 'POST',
          headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
          },
          body: JSON.stringify(user),
       })
          .then((response) => {
-            console.log("status: ", response.status);
-            console.log("message: ", response.json);
+            console.log('status: ', response.status)
+            console.log('message: ', response.json)
          })
          .catch((error) => {
-            console.error("Lỗi:", error);
-         });
-   };
+            console.error('Lỗi:', error)
+         })
+   }
 
    return (
       <div className="min-h-screen flex items-center justify-center">
@@ -75,10 +77,16 @@ const LoginForm = () => {
                >
                   Đăng nhập
                </button>
+               <NavLink
+                  className="w-full flex justify-center mt-3 cursor-pointer"
+                  to={`/${PATHS.REGISTER.IDENTITY}`}
+               >
+                  <p className="text-blue-500">Register</p>
+               </NavLink>
             </form>
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default LoginForm;
+export default LoginForm

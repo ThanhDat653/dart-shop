@@ -1,26 +1,26 @@
-import { useEffect, useState } from "react";
-import { FunnelIcon, Squares2X2Icon } from "@heroicons/react/20/solid";
-import ProductList from "./ProductList";
-import Pagination from "../../components/Pagination";
-import Filter from "../filter/Filter";
-import SideFilter from "../filter/SideFilter";
-import ProductSort from "../filter/ProductSort";
-import { filters } from "../../data/productData";
-import filtersSlide from "../../redux/slices/filtersSlide";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from 'react'
+import { FunnelIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import ProductList from './ProductList'
+import Pagination from '../../components/Pagination'
+import Filter from '../filter/Filter'
+import SideFilter from '../filter/SideFilter'
+import ProductSort from '../filter/ProductSort'
+import { filters } from '../../data/productData'
+import filtersSlide from '../../redux/slices/filtersSlide'
+import { useDispatch } from 'react-redux'
 
 // import LoadingAnimation from "../../../animation/LoadingAnimation";
 
 // const ProductList = lazy(() => import("../container/products/ProductList"));
 
 export default function Shop() {
-   const dispatch = useDispatch();
-   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-   const [filterData, setFilterData] = useState(filters);
-   const [filterName, setFilterName] = useState();
+   const dispatch = useDispatch()
+   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+   const [filterData, setFilterData] = useState(filters)
+   const [filterName, setFilterName] = useState()
 
    function handleCloseSideMenu() {
-      setMobileFiltersOpen(false);
+      setMobileFiltersOpen(false)
    }
 
    function handleToogle(e) {
@@ -32,58 +32,59 @@ export default function Shop() {
                   options: data.options.map((option) => {
                      return option.value === e.target.value
                         ? { ...option, checked: !option.checked }
-                        : option;
+                        : option
                   }),
-               };
+               }
             }
-            return data;
-         })
-      );
+            return data
+         }),
+      )
 
-      setFilterName(e.target.name);
+      setFilterName(e.target.name)
    }
 
    function getCheckedOptionsByName(name) {
-      let checkedValue = [];
+      let checkedValue = []
       filterData.forEach((filter) => {
          if (filter.id === name) {
             filter.options.forEach((option) => {
-               if (option.checked) checkedValue.push(option.value);
-            });
+               if (option.checked) checkedValue.push(option.value)
+            })
          }
-      });
-      return checkedValue;
+      })
+      return checkedValue
    }
 
    useEffect(() => {
       switch (filterName) {
-         case "color":
+         case 'color':
             dispatch(
                filtersSlide.actions.colorFilterChange(
-                  getCheckedOptionsByName(filterName)
-               )
-            );
-            break;
-         case "size":
+                  getCheckedOptionsByName(filterName),
+               ),
+            )
+            break
+         case 'size':
             dispatch(
                filtersSlide.actions.sizeFilterChange(
-                  getCheckedOptionsByName(filterName)
-               )
-            );
-            break;
-         case "category":
+                  getCheckedOptionsByName(filterName),
+               ),
+            )
+            break
+         case 'category':
             dispatch(
                filtersSlide.actions.categoryFilterChange(
-                  getCheckedOptionsByName(filterName)
-               )
-            );
-            break;
+                  getCheckedOptionsByName(filterName),
+               ),
+            )
+            break
          default:
       }
-   }, [filterData]);
+   }, [filterData])
 
    return (
       <div className="bg-gray-100">
+         <p>shop</p>
          <div>
             {/* Mobile filter dialog */}
             {mobileFiltersOpen && (
@@ -150,5 +151,5 @@ export default function Shop() {
             </main>
          </div>
       </div>
-   );
+   )
 }
