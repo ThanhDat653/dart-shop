@@ -1,25 +1,34 @@
 export const ROUTE_PARAMS = {
-   PRODUCT_ID: ":productId",
-   PRODUCT_NAME: ":productName",
-   AUTH_PARAMETER: ":variant",
-};
+   PRODUCT_ID: ':productId',
+   PRODUCT_NAME: ':productName',
+   AUTH_PARAMETER: ':variant',
+}
 
 const PATHS = {
    HOME: {
-      IDENTITY: "",
+      IDENTITY: '',
    },
    SHOP: {
-      IDENTITY: "shop",
+      IDENTITY: 'shop',
    },
    AUTH: {
-      IDENTIFY: "auth",
+      IDENTIFY: 'auth',
    },
    LOGIN: {
-      IDENTITY: "login",
+      IDENTITY: 'login',
    },
    REGISTER: {
-      IDENTITY: "register",
+      IDENTITY: 'register',
    },
-};
+   CONTACT: {
+      IDENTITY: 'contact',
+   },
+   ABOUT: {
+      IDENTITY: 'about',
+   },
+   CART: {
+      IDENTITY: 'cart',
+   },
+}
 
-export { PATHS };
+export { PATHS }

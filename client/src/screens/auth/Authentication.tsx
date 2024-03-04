@@ -1,6 +1,6 @@
-import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
-import LoadingAnimation from "../../components/loadingAnimation/LoadingAnimation";
+import { Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
+import LoadingAnimation from '../../components/LoadingAnimation/LoadingAnimation'
 
 const Authentication = () => {
    return (
@@ -9,7 +9,7 @@ const Authentication = () => {
             <Outlet />
          </Suspense>
       </div>
-   );
-};
+   )
+}
 
-export default Authentication;
+export default Authentication
