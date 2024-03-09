@@ -1,4 +1,3 @@
-import { connection } from "../../database/db.js";
 import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
 
@@ -30,16 +29,15 @@ export const isValidPhoneNumber = (phoneNumber) => {
 };
 
 export const checkExistanceUser = async (email) => {
-   try {
-      let [results, fields] = await connection.query(
-         "SELECT * FROM User WHERE Email=?",
-         [email]
-      );
-
-      return results.length !== 0;
-   } catch (error) {
-      throw error;
-   }
+   // try {
+   //    let [results, fields] = await connection.query(
+   //       "SELECT * FROM User WHERE Email=?",
+   //       [email]
+   //    );
+   //    return results.length !== 0;
+   // } catch (error) {
+   //    throw error;
+   // }
 };
 
 const registerValidate = async (req) => {
@@ -80,45 +78,41 @@ const createUserInDatabase = async (
    email,
    hashedPassword,
    userId,
-   phoneNumber
+   phoneNumber,
 ) => {
-   try {
-      const [results, fields] = await connection.query(
-         "INSERT INTO User (FullName, Email, Password, UserID, PhoneNumber, RoleID) VALUES (?, ?, ?, ?, ?, ?)",
-         [username, email, hashedPassword, userId, phoneNumber, 2]
-      );
-   } catch (error) {
-      throw error;
-   }
+   // try {
+   //    const [results, fields] = await connection.query(
+   //       "INSERT INTO User (FullName, Email, Password, UserID, PhoneNumber, RoleID) VALUES (?, ?, ?, ?, ?, ?)",
+   //       [username, email, hashedPassword, userId, phoneNumber, 2]
+   //    );
+   // } catch (error) {
+   //    throw error;
+   // }
 };
 
 export const createUserService = async (req, res) => {
-   try {
-      const validationError = await registerValidate(req);
-
-      if (validationError) {
-         return res.status(400).json(validationError);
-      }
-
-      const { username, email, password, phoneNumber } = req.body;
-      const userId = uuidv4();
-      const hashedPassword = await hashPassword(password);
-
-      createUserInDatabase(
-         username,
-         email,
-         hashedPassword,
-         userId,
-         phoneNumber,
-         2
-      );
-
-      res.status(201).json({
-         message: "Người dùng đã được tạo mới thành công.",
-      });
-   } catch (error) {
-      res.status(500).json({
-         error: "Đã xảy ra lỗi trong quá trình tạo người dùng." + error,
-      });
-   }
+   // try {
+   //    const validationError = await registerValidate(req);
+   //    if (validationError) {
+   //       return res.status(400).json(validationError);
+   //    }
+   //    const { username, email, password, phoneNumber } = req.body;
+   //    const userId = uuidv4();
+   //    const hashedPassword = await hashPassword(password);
+   //    createUserInDatabase(
+   //       username,
+   //       email,
+   //       hashedPassword,
+   //       userId,
+   //       phoneNumber,
+   //       2
+   //    );
+   //    res.status(201).json({
+   //       message: "Người dùng đã được tạo mới thành công.",
+   //    });
+   // } catch (error) {
+   //    res.status(500).json({
+   //       error: "Đã xảy ra lỗi trong quá trình tạo người dùng." + error,
+   //    });
+   // }
 };

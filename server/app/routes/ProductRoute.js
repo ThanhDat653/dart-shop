@@ -1,10 +1,10 @@
-import express from "express";
-import { ProductById, Products } from "../controller/productController.js";
+import express from 'express'
+import * as controller from '../controller/index.js'
 
-var router = express.Router();
+var router = express.Router()
 
 /* GET users listing. */
-router.get("/", Products);
-router.get("/:id", ProductById);
+router.get('/:id', controller.getProductByID)
+router.get('/', controller.getAllProducts).post('/', controller.createProduct)
 
-export { router as ProductRoute };
+export { router as ProductRoute }
