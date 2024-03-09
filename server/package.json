@@ -1,13 +1,13 @@
 {
    "name": "app",
-   "version": "0.0.0",
-   "private": true,
-   "type": "module",
+   "version": "1.0.0",
    "scripts": {
-      "start": "node app/app.js",
       "dev": "nodemon --exec babel-node app/app.js"
    },
    "dependencies": {
+      "@babel/core": "^7.24.0",
+      "@babel/node": "^7.23.9",
+      "@babel/preset-env": "^7.24.0",
       "axios": "^1.6.5",
       "bcrypt": "^5.1.1",
       "cookie-parser": "~1.4.4",
@@ -26,10 +26,6 @@
       "uuidv4": "^6.2.13"
    },
    "devDependencies": {
-      "@babel/cli": "^7.23.9",
-      "@babel/core": "^7.24.0",
-      "@babel/node": "^7.23.9",
-      "@babel/preset-env": "^7.24.0",
       "@types/node": "^20.11.10"
    }
 }

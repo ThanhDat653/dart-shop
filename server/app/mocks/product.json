@@ -1,0 +1,109 @@
+{
+   "productData": [
+      {
+         "id": 1,
+         "name": "Jordan Delta 3 Mid",
+         "typeID": "jd3",
+         "color": "black",
+         "sizes": "37, 38, 39, 40",
+         "price": 400,
+         "image": "jordan_delta_3_black.png",
+         "description": "Inspired by '90s on-court gear and the Space-Age aesthetic, the Delta 3 is ready to launch. With super-lightweight technical materials, they have a retro-futuristic look and feel. This is the next-gen footwear that's gonna take you into tomorrow"
+      },
+      {
+         "id": 2,
+
+         "name": "Jordan Delta 3 Mid",
+         "typeID": "jd3",
+         "color": "khaki",
+         "sizes": "37, 38, 39, 40",
+         "price": 400,
+         "image": "jordan_delta_3_khaki.png",
+         "description": "Inspired by '90s on-court gear and the Space-Age aesthetic, the Delta 3 is ready to launch. With super-lightweight technical materials, they have a retro-futuristic look and feel. This is the next-gen footwear that's gonna take you into tomorrow"
+      },
+      {
+         "id": 3,
+
+         "name": "Air Jordan 1",
+         "typeID": "jd1",
+         "color": "white",
+         "sizes": "37, 38, 39, 40",
+         "price": 199,
+         "image": "jordan_1_black_white.png",
+         "description": "Making iconic style even more comfortable. The Air Jordan 1 Zoom Cmft remakes the 1st Air Jordan with lightweight, low-profile cushioning and elements that improve wearability. Leathers and textiles in the upper have a broken-in feel. A lined, padded collar cups the heel for a secure fit."
+      },
+      {
+         "id": 4,
+
+         "name": "Air Jordan 1",
+         "typeID": "jd1",
+         "color": "yellow",
+         "sizes": "37, 38, 39, 40",
+         "price": 99,
+         "image": "jordan_1_yellow.png",
+         "description": "Making iconic style even more comfortable. The Air Jordan 1 Zoom Cmft remakes the 1st Air Jordan with lightweight, low-profile cushioning and elements that improve wearability. Leathers and textiles in the upper have a broken-in feel. A lined, padded collar cups the heel for a secure fit."
+      },
+      {
+         "id": 5,
+
+         "name": "Air Jordan 1",
+         "typeID": "jd1",
+         "color": "orange",
+         "sizes": "37, 38, 39, 40",
+         "price": 89,
+         "image": "jordan_1_orange.png",
+         "description": "Making iconic style even more comfortable. The Air Jordan 1 Zoom Cmft remakes the 1st Air Jordan with lightweight, low-profile cushioning and elements that improve wearability. Leathers and textiles in the upper have a broken-in feel. A lined, padded collar cups the heel for a secure fit."
+      },
+      {
+         "id": 6,
+
+         "name": "Air Jordan 1",
+         "typeID": "jd1",
+         "color": "violet",
+         "sizes": "37, 38, 39, 40",
+         "price": 189,
+         "image": "jordan_1_violet.png",
+         "description": "Making iconic style even more comfortable. The Air Jordan 1 Zoom Cmft remakes the 1st Air Jordan with lightweight, low-profile cushioning and elements that improve wearability. Leathers and textiles in the upper have a broken-in feel. A lined, padded collar cups the heel for a secure fit."
+      },
+      {
+         "id": 7,
+
+         "name": "Nike Air Max 270",
+         "typeID": "am270",
+         "color": "white-black",
+         "sizes": "37, 38, 39, 40",
+         "price": 399,
+         "image": "nike_airmax_270_white_black.png",
+         "description": "Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colours."
+      },
+      {
+         "id": 8,
+
+         "name": "Nike Air Max 270",
+         "typeID": "am270",
+         "color": "white",
+         "sizes": "37, 38, 39, 40",
+         "price": 399,
+         "image": "nike_airmax_270_white.png",
+         "description": "Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colours."
+      },
+      {
+         "id": 9,
+
+         "name": "Nike Air Max 270",
+         "typeID": "am270",
+         "color": "black",
+         "sizes": "37, 38, 39, 40",
+         "price": 419,
+         "image": "nike_airmax_270_black.png",
+         "description": "Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colours."
+      }
+   ],
+   "typeID": [
+      { "id": "jd1", "name": "Jordan 1" },
+      { "id": "jd2", "name": "Jordan 2" },
+      { "id": "jd3", "name": "Jordan 3" },
+      { "id": "am270", "name": "Air Max 270" },
+      { "id": "am97", "name": "Air Max 97" }
+   ]
+}

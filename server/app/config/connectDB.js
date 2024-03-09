@@ -1,10 +1,10 @@
 import { Sequelize } from "sequelize";
 
 // Option 3: Passing parameters separately (other dialects)
-const sequelize = new Sequelize("dart_shop", "root", "123456", {
+const sequelize = new Sequelize("dart_shop", "root", "", {
    host: "localhost",
    dialect: "mysql",
-   port: "3307",
+   port: "3306",
 });
 
 const connection = async () => {
